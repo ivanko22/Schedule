@@ -11,7 +11,7 @@ app.use(express.json());
 
 require("./routes")(app);
 
-const PORT = 8000;
+const PORT = 8080;
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
