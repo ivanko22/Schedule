@@ -3,37 +3,91 @@
     <head>
         <meta charset="utf-8">
         <title> Schedule </title>
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">        <link rel="stylesheet" href="/css/main.css">
     </head>
     <body>
         <header>
-            <button class="backButton"> < Back </button>
-
-            <img src="../img/logo_studytube.svg" alt="logo"> 
-
-            <div>
-                <a href="">
-                    <img src="../img/search.svg">
-                </a>
-                <a href="">
-                    <img src="../img/notification.svg"> 
-                </a>
-                <a href="">
-                    <img src="../img/profile.svg"> 
-                </a>
-                <!-- <a class="IKlink" href="">
-                    IK 
-                </a> -->
-            </div>
+            <nav class="navigation">
+        
+                <div class="nav_back"> 
+                    <img src="img/drop-down.svg" class="nav-icon-back">
+                    <span class="nav_back"> Back </span>
+                </div>
+        
+                <div> <img src="img/logo_studytube.svg"> </div>
+                
+                <div class="nav_buttons">
+                    <span> <img src="img/search.svg" class="icons-nav"> </span>
+                    <span> <img src="img/notification.svg" class="icons-nav"> </span>
+                    <span> <img src="img/profile.svg" class="icons-nav"> </span>
+                    <span class="icons-nav" style="margin-right:68px"> <img src="img/drop-down-profile.svg" class="icon-profile-dropdown"> </span>
+                    
+                </div>
+            </nav>
         </header>
 
-        <div class="hero">
-            <img src="../img/hero-image.png" alt="heroimage">
-            
-            <h1> Schedule </h1>
-
-            <h2> First three steps for Medical Help </h2>
-
+    <div class="hero-image"> 
+        <div class="hero-text">
+            <p class="hero-tittle"> Schedule </p>
+            <p class="hero-subtittle"> First Three Step for Medical Help </p>
         </div>
+    </div>
+
+    <main>
+
+        <div class="select">
+            <p class="select-tittle"> Select Mounth</p>
+        </div>
+    
+        <div class="month-btns">
+            <button class="nav-icon-back-month"> <i class="fa fa-chevron-left"></i> </button>
+            
+            <div class="month-btn"> 
+                <div class="month-name"> March </div>
+			    <div class="month-year"> 2019 </div>
+            </div>
+        </div>
+
+        <div class="flex-container" id="march">
+            <div class="flex-card-block-left"> 
+                <div class="time-block">
+                    <p class="other-dates"> Other Dates: +2  </p>  
+                </div> 
+            
+                <div class="time-block" style="height:51px"> 
+                    <p class="time"> <img src="img/clock.svg" class="icon-time"> 
+                        <span> 11:00 - 15:00 </span> </p>  
+                </div>
+    
+                <div class="time-block">
+                    <p class="students-going"> 0 students going  </p>  
+                </div> 
+        </div>
+
+    <!-- Schedule Card -->
+        <div class="flex-card-block-center">
+            <div class="lecture"> 
+                <span> <img src="img/lecture.svg" class="lecture-icon"> </span>  
+                <p class="lecture-tittle"> First 3 Steps for Medical Help </p> 
+            </div>
+            <div class="lecture"> 
+                <span> <img src="img/date.svg" class="lecture-icon" style="height:20px"> </span>  
+                <p class="lecture-date"> SATURDAY, <span class="lecture-date-bold"> March 4, 2019  </span> 
+                <span class="lecture-session">   Session 1 of 2 </span> </p> 
+            </div>
+            <div class="lecture"> 
+                <span> <img src="img/location.svg" class="lecture-icon" style="height:21px"> </span>  
+                <p class="lecture-tittle"> Amsterdam Central Hospital, Amsterdam, Netherlands  </p> 
+            </div>
+        </div>
+            <div class="flex-card-block-right"> 
+                <button class="button flex-container">Register</button>
+            </div>
+        </div>
+      <!-- Schedule Card -->
+
+    </main>
+
     </body>
 </html>

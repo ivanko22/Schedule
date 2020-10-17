@@ -1,36 +1,346 @@
 *{margin: 0;padding: 0;}
 
-header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: #5cd2da;
-}
-
     .backButton{
-        color: #5cd2da;
+        color: #5ca2da;
         background: none;
         border: none;
         cursor: pointer;
     }
 
-    .IKlink{
-        background-color: #5cd2da;
-    }
+/*navigation start*/
+	.nav_back {
+		display: flex;
+		align-items: center;
+		width: 15%;
+		height: 22px;
+  		font-family: 'Open Sans', sans-serif;
+  		font-size: 16px;
+  		font-weight: 500;
+  		color: #5ca2da;
+	}
 
-.hero{
-    position: relative;
+	.nav-icon-back {
+		margin-left: 74px;
+		transform: rotate(-270deg);
+	}
+
+	.navigation {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 74px;
+		background-color: white;
+	}
+
+	.navigation > div {
+		display: flex;
+		background-image: white;
+	}
+
+	.nav_buttons {
+		display: flex;
+		align-items: center;
+		justify-content: right;
+		height: 74px;
+		width: 15%;
+	}
+
+	.icons-nav {
+		display: flex;
+		width: 34px;
+  		height: 34px;
+  		margin-right: 6px;
+  		object-fit: contain;
+	}
+
+	.icon-profile-dropdown {
+		display: flex;
+		align-self: center;
+		height: 6px;
+		margin-right: 68px;
+	}
+/*navigation end*/
+
+/*hero start*/
+	.hero-image {
+		background-image: url("../img/hero-image.png");
+		height: 300px;
+		background-position: left;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+	}
+
+	.hero-text {
+		text-align: right;
+		position: absolute;
+		top: 115px;
+		right: 65px;
+		color: white;
+	}
+
+	.hero-tittle {
+  		font-family: 'Open Sans', sans-serif;
+  		font-size: 36px;
+  		font-weight: 800;
+		text-align: right;
+		margin-bottom: 0px;
+		color: #0b3040;
+	}
+
+	.hero-subtittle {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 23px;
+		font-weight: 600;
+		text-align: right;
+		margin-top: 14px;
+		color: #0b3040;
+	}
+/*hero end*/
+    
+/*select month start*/
+	.select {
+		display: flex;
+		height: 92px;
+		background-color: white;
+		border-bottom: solid 0.5px #4997d5;
+		margin-right: 60px;
+		margin-left: 60px;
+		margin-bottom: 40px;
+	}
+
+	.select-tittle {
+  		font-family: 'Open Sans', sans-serif;
+  		font-size: 21px;
+  		font-weight: 600;
+  		color: #5a6b79;
+  		margin-top: 54px;
+  	}
+
+  	.month-btns {
+        display: flex;
+        flex-direction: row;
+		height: 68px;
+		background-color: white;
+		margin-right: 60px;
+		margin-left: 60px;
+		margin-bottom: 40px;
+	}
+
+	.month-btn:hover  {
+    	background-color: #dcf0ff;
+    	color: #4997d5;
+    	cursor: pointer;
+    	transition: 0.7s;
+	} 
+
+	.month-btn {
+		border: none;
+		outline: none;
+		width: 16%;
+		height: 68px;
+		margin-left: 6px;
+		margin-right: 6px;
+		border-radius: 4px;
+  		background-color: #edf5fb; 
+  		color: #4997d5;
+	}
+
+	.month-btn-active {
+		border: none;
+		outline: none;
+		width: 16%;
+		height: 68px;
+		margin-left: 6px;
+		margin-right: 6px;
+		border-radius: 4px;
+  		background-color: #5fb1f3; 
+  		color: white;
+	}
+
+	.month-name {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 16px;
+		font-weight: 500;
+		text-align: center;
+		position: relative;
+		top: 14px;
+	}
+
+	.month-year {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 12px;
+		font-weight: 300;
+		position: relative;
+		top: 16px;
+		text-align: center;
+	}
+  	
+  	.nav-icon-back-month {
+		margin-right: 10px;
+		margin-left: 6px;
+		left: -30px;
+        border: 0;
+		background: none;
+	}
+    
+    .fa{
+        font-family: "Font Awesome 5 Free";
+        font-size: 16px;
+        font-weight: 900;
+        color: #4997d5;
+    }
+/*select month end*/
+
+/* ScheduleCard Start */
+.flex-container {
+	display: flex;
+	margin-left: 60px;
+	margin-right: 60px;
+	margin-top: 32px;
+	margin-bottom: 32px;
+	background-color: white;
+	height: 154px;
+	border-radius: 6px;
+	border: solid 0.5px #4997d5;
+	text-align: center;
 }
 
-    .hero h1{
-        position: absolute;
-        bottom: 100px;
-        right: 50px;
-    }
+.flex-card-block-left {
+	width: 20%;
+}
 
-    .hero h2{
-        position: absolute;
-        bottom: 50px;
-        right: 50px;
-    }
+.other-dates {
+	font-family: 'Open Sans', sans-serif;
+	  font-size: 12px;
+	  font-weight: 300;
+	  text-align: center;
+	  color: #4997d5;
+	  text-decoration: underline;
+	  margin-top: 16px;
+}
 
+.time-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 5px;
+}
+
+.time {
+	display: flex;
+	font-family: 'Open Sans', sans-serif;
+	  font-size: 16px;
+	  font-weight: 600;
+	  text-align: center;
+	  color: #4997d5;
+	  /*box*/
+	  width: 160px;
+	 height: 42px;
+	  background-color: #edf5fb;
+	  justify-content: center;
+	  align-items: center;
+	  margin-top: 0px;
+	  margin-bottom: 0px;
+
+}
+
+.icon-time {
+	display: flex;
+	width: 20px;
+	  height: 20px;
+	  margin-right:12px;
+	  transform: rotate(-360deg);
+}
+
+.students-going {
+	display: flex;
+	font-family: 'Open Sans', sans-serif;
+	  font-size: 13px;
+	  font-weight: 300;
+	  text-align: center;
+	  color: #5a6b79;
+	  margin-top: 0px;
+
+}
+
+.flex-card-block-center {
+	width: 55%;
+}
+
+.lecture {
+	display: flex;
+	  align-items: center;
+	  height: 14%;
+	  margin-left: 8%;
+	  margin-top: 22px;
+}
+
+.lecture-icon {
+	display: flex;
+	width: 22px;
+	height: 18px;
+	margin-right: 24px;
+	margin-left: 16px;
+}
+
+.lecture-tittle {
+	display: flex;
+	font-family: 'Open Sans', sans-serif;
+	  font-size: 14px;
+	  font-weight: 300;
+	  text-align: left;
+	  color: #5a6b79;
+}
+
+.flex-card-block-right {
+	display: flex;
+	width: 25%;
+	justify-content: center;
+	align-items: center;
+}
+
+.lecture-date {
+	font-family: 'Open Sans', sans-serif;
+	  font-size: 22px;
+	  text-align: left;
+	  font-weight: 300;
+	  color: #8d9fae;
+}
+
+.lecture-date-bold {
+	font-weight: 600;
+	color: #5a6b79;
+}
+
+.lecture-session {
+	font-size: 20px;
+	font-weight: 300px;
+	margin-left: 16px;
+	text-decoration: underline;
+	color: #4997d5;
+}
+
+.button {
+	display: inline-table;
+	margin: 20px;
+	align-self: center;
+	text-align: center;
+	letter-spacing: 0.5px;
+	width: 217px;
+	  height: 48px;
+	  border-radius: 4px;
+	  background-color: #4997d5;
+	  font-family: 'Open Sans', sans-serif;
+	  font-size: 14px;
+	  font-weight: 400;
+	  text-transform: uppercase;
+	  text-align: center;
+	  color: white;
+	  cursor: pointer;
+}
+
+:hover.button {
+	background-color: #5fb1f3;
+}
+/* ScheduleCard End */
