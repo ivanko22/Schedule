@@ -1,0 +1,36 @@
+*{margin: 0;padding: 0;}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #5cd2da;
+}
+
+    .backButton{
+        color: #5cd2da;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .IKlink{
+        background-color: #5cd2da;
+    }
+
+.hero{
+    position: relative;
+}
+
+    .hero h1{
+        position: absolute;
+        bottom: 100px;
+        right: 50px;
+    }
+
+    .hero h2{
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+    }
+

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="17" cy="17" r="17" fill="#EDF5FB"/>
+        <text fill="#4997D5" font-family="OpenSans-SemiBold, Open Sans" font-size="16" font-weight="500">
+            <tspan x="9.445" y="23">IK</tspan>
+        </text>
+    </g>
+</svg>
