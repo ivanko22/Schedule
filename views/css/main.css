@@ -46,7 +46,6 @@
 	}
 
 	.icons-nav {
-		display: flex;
 		width: 34px;
   		height: 34px;
   		margin-right: 6px;
@@ -54,10 +53,8 @@
 	}
 
 	.icon-profile-dropdown {
-		display: flex;
-		align-self: center;
 		height: 6px;
-		margin-right: 68px;
+		width: initial;
 	}
 /*navigation end*/
 
@@ -79,7 +76,7 @@
 		color: white;
 	}
 
-	.hero-tittle {
+	.hero-title {
   		font-family: 'Open Sans', sans-serif;
   		font-size: 36px;
   		font-weight: 800;
@@ -88,7 +85,7 @@
 		color: #0b3040;
 	}
 
-	.hero-subtittle {
+	.hero-subtitle {
 		font-family: 'Open Sans', sans-serif;
 		font-size: 23px;
 		font-weight: 600;
@@ -109,7 +106,7 @@
 		margin-bottom: 40px;
 	}
 
-	.select-tittle {
+	.select-title {
   		font-family: 'Open Sans', sans-serif;
   		font-size: 21px;
   		font-weight: 600;
@@ -284,7 +281,7 @@
 	margin-left: 16px;
 }
 
-.lecture-tittle {
+.lecture-title {
 	display: flex;
 	font-family: 'Open Sans', sans-serif;
 	  font-size: 14px;
