@@ -3,6 +3,12 @@ const mongoose = require("mongoose");
 
 const app = express();
 
+mongoose.connect("mongodb://localhost:27017/schedule", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+
 app.set("view engine", "ejs");
 
 app.use(express.static(__dirname + "/views"));
