@@ -10,15 +10,15 @@ module.exports = {
         response.render("ejs/price.ejs")
     },
 
-    createNewClass: function(request, response){
+    createNewClass: function(req, res){
 
         let classObject = {
-            name: "First Class",
+            name: "Third Class",
             date: new Date(),
-            location: "Somewhere",
+            location: "There",
             classType: "Medical",
             attendees: [],
-            teacher: "Lee"
+            teacher: "Frank"
         };
 
         let newClass = new Class(classObject);
@@ -28,6 +28,7 @@ module.exports = {
         newClass.save()
             .then((response) => {
                 console.log(response);
+                res.redirect("/");
             })
             .catch((err)=>{
                 console.log(err);

@@ -8,7 +8,6 @@ mongoose.connect("mongodb://localhost:27017/schedule", {
     useUnifiedTopology: true
 });
 
-
 app.set("view engine", "ejs");
 
 app.use(express.static(__dirname + "/views"));
@@ -17,7 +16,7 @@ app.use(express.json());
 
 require("./routes")(app);
 
-const PORT = 8000;
+const PORT = 8080;
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
