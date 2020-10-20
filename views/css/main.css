@@ -190,7 +190,12 @@
 /*select month end*/
 
 /* ScheduleCard Start */
-.flex-container {
+
+/* .scheduleCard{
+	display: flex;
+} */
+
+.scheduleCard{
 	display: flex;
 	margin-left: 60px;
 	margin-right: 60px;
@@ -201,6 +206,11 @@
 	border-radius: 6px;
 	border: solid 0.5px #4997d5;
 	text-align: center;
+}
+
+#classes{
+	display: flex;
+	flex-direction: column;
 }
 
 .flex-card-block-left {
@@ -341,13 +351,6 @@
 	background-color: #5fb1f3;
 }
 
-.scheduleCard{
-	display: flex;
-}
 
-#classes{
-	display: flex;
-	flex-direction: column;
-}
 /* ScheduleCard End */
 
