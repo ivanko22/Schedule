@@ -340,4 +340,14 @@
 :hover.button {
 	background-color: #5fb1f3;
 }
+
+.scheduleCard{
+	display: flex;
+}
+
+#classes{
+	display: flex;
+	flex-direction: column;
+}
 /* ScheduleCard End */
+

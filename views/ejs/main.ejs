@@ -48,43 +48,48 @@
             </div>
         </div>
 
-        <div class="flex-container" id="march">
-            <div class="flex-card-block-left"> 
-                <div class="time-block">
-                    <p class="other-dates"> Other Dates: +2  </p>  
-                </div> 
-            
-                <div class="time-block" style="height:51px"> 
-                    <p class="time"> <img src="img/clock.svg" class="icon-time"> 
-                        <span> 11:00 - 15:00 </span> </p>  
-                </div>
-    
-                <div class="time-block">
-                    <p class="students-going"> 0 students going  </p>  
-                </div> 
-        </div>
+        <div id="classes"></div>
 
     <!-- Schedule Card -->
-        <div class="flex-card-block-center">
-            <div class="lecture"> 
-                <span> <img src="img/lecture.svg" class="lecture-icon"> </span>  
-                <p class="lecture-title"> First 3 Steps for Medical Help </p> 
+        <template id="scheduleCard">
+            <div class="scheduleCard">
+                <div class="flex-card-block-left">
+                    <div class="time-block">
+                        <p class="other-dates"> Other Dates: +2  </p>  
+                    </div> 
+                
+                    <div class="time-block" style="height:51px"> 
+                        <p class="time"> <img src="img/clock.svg" class="icon-time"> 
+                            <span> 11:00 - 15:00 </span> </p>  
+                    </div>
+        
+                    <div class="time-block">
+                        <p class="students-going"> 0 students going  </p>  
+                    </div> 
+                </div> 
+
+                <div class="flex-card-block-center">
+                    <div class="lecture"> 
+                        <span> <img src="img/lecture.svg" class="lecture-icon"> </span>  
+                        <p class="lecture-title"></p> 
+                    </div>
+                    <div class="lecture"> 
+                        <span> <img src="img/date.svg" class="lecture-icon" style="height:20px"> </span>  
+                        <p class="lecture-date"> SATURDAY, <span class="lecture-date-bold"> March 4, 2019  </span> 
+                        <span class="lecture-session">   Session 1 of 2 </span> </p> 
+                    </div>
+                    <div class="lecture"> 
+                        <span> <img src="img/location.svg" class="lecture-icon" style="height:21px"> </span>  
+                        <p class="lecture-title"> Amsterdam Central Hospital, Amsterdam, Netherlands  </p> 
+                    </div>
+                </div>
+
+                <div class="flex-card-block-right"> 
+                    <button class="button flex-container">Register</button>
+                </div>
             </div>
-            <div class="lecture"> 
-                <span> <img src="img/date.svg" class="lecture-icon" style="height:20px"> </span>  
-                <p class="lecture-date"> SATURDAY, <span class="lecture-date-bold"> March 4, 2019  </span> 
-                <span class="lecture-session">   Session 1 of 2 </span> </p> 
-            </div>
-            <div class="lecture"> 
-                <span> <img src="img/location.svg" class="lecture-icon" style="height:21px"> </span>  
-                <p class="lecture-title"> Amsterdam Central Hospital, Amsterdam, Netherlands  </p> 
-            </div>
-        </div>
-            <div class="flex-card-block-right"> 
-                <button class="button flex-container">Register</button>
-            </div>
-        </div>
-      <!-- Schedule Card -->
+        </template>
+    <!-- Schedule Card -->
 
     </main>
 
