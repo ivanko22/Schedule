@@ -12,7 +12,7 @@ fetch("/class", {
             let timeSpan = document.getElementById("timeSpan");
             let ScheduleCard = template.cloneNode(true);
 
-            //Set Name
+            //Lecture
             ScheduleCard.children[1].children[0].children[1].innerText = classItem.name;
             
             //Set Time
@@ -21,9 +21,18 @@ fetch("/class", {
             ScheduleCard.children[0].children[1].children[0].children[1].innerText = `${time}:00 - ${time+1}:00`;
 
             //Set students attenging
-
             ScheduleCard.children[0].children[2].children[0].innerText = `${classItem.attendees.length} student attending `;
 
+            //Day of Week
+            let mdy = dateTime.toDateString();
+            let dayWeek = mdy.split(/:| /)[0]+ ",";
+            ScheduleCard.children[1].children[1].children[1].innerText = dayWeek;
+
+            console.log("day", mdy.split(/:| /)[0]); 
+
+            //Set Location
+            ScheduleCard.children[1].children[2].children[1].innerText = classItem.location;
+            
             container.appendChild(ScheduleCard);
             
 
