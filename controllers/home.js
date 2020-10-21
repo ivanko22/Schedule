@@ -13,12 +13,12 @@ module.exports = {
     createNewClass: function(req, res){
 
         let classObject = {
-            name: "Some unique class",
+            name: "First real class",
             date: new Date(),
-            location: "Here",
+            location: "Over yonder",
             classType: "Medical",
-            attendees: [],
-            teacher: "Johnny"
+            attendees: ["bob", "frank", "sally"],
+            teacher: "Me"
         };
 
         let newClass = new Class(classObject);
