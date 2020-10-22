@@ -27,8 +27,12 @@ fetch("/class", {
             let mdy = dateTime.toDateString();
             let dayWeek = mdy.split(/:| /)[0]+ ",";
             ScheduleCard.children[1].children[1].children[1].innerText = dayWeek;
+            ScheduleCard.children[1].children[1].children[2].innerText = 
+            mdy.split(/:| /)[1] + " " + mdy.split(/:| /)[2] + mdy.split(/:| /)[3]+ ",";
 
-            console.log("day", mdy.split(/:| /)[0]); 
+
+            console.log("day", mdy.split(/:| /)); 
+            console.log("mont", mdy.split(/:| /)[1]); 
 
             //Set Location
             ScheduleCard.children[1].children[2].children[1].innerText = classItem.location;
