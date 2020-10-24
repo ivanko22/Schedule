@@ -23,25 +23,35 @@ fetch("/class", {
             //Set students attenging
             ScheduleCard.children[0].children[2].children[0].innerText = `${classItem.attendees.length} student attending `;
 
-            //Day of Week
-            let mdy = dateTime.toDateString();
-            let dayWeek = mdy.split(/:| /)[0]+ ",";
-            ScheduleCard.children[1].children[1].children[1].innerText = dayWeek;
-            ScheduleCard.children[1].children[1].children[2].innerText = 
-            mdy.split(/:| /)[1] + " " + mdy.split(/:| /)[2] + mdy.split(/:| /)[3]+ ",";
-
-
-            console.log("day", mdy.split(/:| /)); 
-            console.log("mont", mdy.split(/:| /)[1]); 
+            //Set date
+            let dateString = dateTime.toDateString();
+            let dateArray = dateString.split(/:| /);
+            let displayDay = `${dateArray[0]}`;
+            let displayDate = `${dateArray[1]} ${dateArray[2]}, ${dateArray[3]}`;
+            
+            ScheduleCard.children[1].children[1].children[1].innerText = displayDay;
+            ScheduleCard.children[1].children[1].children[2].innerText = displayDate;
+            
+            // console.log("displayDate", displayDate);
 
             //Set Location
             ScheduleCard.children[1].children[2].children[1].innerText = classItem.location;
             
             container.appendChild(ScheduleCard);
             
-
         }
     })
     .catch((err) => {
         console.log(err)
     });
+
+let today = new Date()
+let dateArray = [today];
+
+for(let i = 1; i < 11; i++){
+    let newDate = new Date(today.getFullYear(), today.getMonth() - i, today.getDate());
+    dateArray.push(newDate);
+}
+
+console.log("dateArray", dateArray);
+console.log("dateArray[1]", dateArray[2].toString().split(/:| /));
