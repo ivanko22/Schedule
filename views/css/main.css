@@ -179,6 +179,7 @@
 		left: -30px;
         border: 0;
 		background: none;
+		cursor: pointer;
 	}
     
     .fa{
@@ -215,6 +216,8 @@
 
 .flex-card-block-left {
 	width: 20%;
+	margin-top: 8px;
+	margin-left: 20px;
 }
 
 .other-dates {

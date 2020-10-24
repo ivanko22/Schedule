@@ -5,8 +5,8 @@ dateArray.pop()
 let drawMonthCards = () => {
     let container = document.getElementById("month-btns");
 
-    while(container.children.length > 0){
-        container.removeChild(container.firstChild);
+    while(container.children.length > 1){
+        container.removeChild(container.lastChild);
     }
 
     for(let date of dateArray){
