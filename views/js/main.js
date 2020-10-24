@@ -1,4 +1,40 @@
 
+let dateArray = [];
+dateArray.pop()
+
+let drawMonthCards = () => {
+    let container = document.getElementById("month-btns");
+
+    while(container.children.length > 0){
+        container.removeChild(container.firstChild);
+    }
+
+    for(let date of dateArray){
+        let monthCard = template.cloneNode(true);
+        monthCard.children[0].innerText = months[date.getMonth()];
+        monthCard.children[1].innerText = date.getFullYear();
+        container.appendChild(monthCard);
+    }
+}
+
+let monthScroll = () => {
+    
+    let newArray = [];
+    let newDate = new Date(dateArray[0].getFullYear(), dateArray[0].getMonth() -1, dateArray[0].getMonth());
+    newArray.push(newDate);
+    
+    for(let i = 0; i < dateArray.length -1; i++){
+        newArray.push(dateArray[i]);
+    }
+
+    dateArray = newArray;
+    drawMonthCards();
+}
+
+let backButton = document.getElementById("backMonth");
+backButton.onclick = monthScroll;
+
+
 fetch("/class", {
     method: "get"
 })
@@ -32,8 +68,6 @@ fetch("/class", {
             ScheduleCard.children[1].children[1].children[1].innerText = displayDay;
             ScheduleCard.children[1].children[1].children[2].innerText = displayDate;
             
-            // console.log("displayDate", displayDate);
-
             //Set Location
             ScheduleCard.children[1].children[2].children[1].innerText = classItem.location;
             
@@ -46,12 +80,14 @@ fetch("/class", {
     });
 
 let today = new Date()
-let dateArray = [today];
+let container = document.getElementById("month-btns");
+let template = document.getElementById("monthCard").content.children[0];
+let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-for(let i = 1; i < 11; i++){
+for(let i = 5; i >= 0; i--){
     let newDate = new Date(today.getFullYear(), today.getMonth() - i, today.getDate());
     dateArray.push(newDate);
 }
+drawMonthCards();
 
-console.log("dateArray", dateArray);
-console.log("dateArray[1]", dateArray[2].toString().split(/:| /));
+

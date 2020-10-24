@@ -23,11 +23,11 @@ module.exports = {
 
         let newClass = new Class(classObject);
 
-        console.log(newClass);
+        // console.log(newClass);
 
         newClass.save()
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 res.redirect("/");
             })
             .catch((err)=>{

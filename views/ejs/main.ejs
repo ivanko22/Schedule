@@ -26,29 +26,34 @@
             </nav>
         </header>
 
-    <div class="hero-image"> 
-        <div class="hero-text">
-            <p class="hero-title"> Schedule </p>
-            <p class="hero-subtitle"> First Three Step for Medical Help </p>
+        <div class="hero-image"> 
+            <div class="hero-text">
+                <p class="hero-title"> Schedule </p>
+                <p class="hero-subtitle"> First Three Step for Medical Help </p>
+            </div>
         </div>
-    </div>
 
     <main>
 
         <div class="select">
             <p class="select-title"> Select Month</p>
         </div>
-    
-        <div class="month-btns">
-            <button class="nav-icon-back-month"> <i class="fa fa-chevron-left"></i> </button>
-            
-            <div class="month-btn"> 
-                <div class="month-name"> March </div>
-			    <div class="month-year"> 2019 </div>
-            </div>
+        
+        <button id="backMonth" class="nav-icon-back-month"> <i class="fa fa-chevron-left"></i> </button>
+
+        <div id="month-btns" class="month-btns">
         </div>
 
         <div id="classes"></div>
+
+    <!-- Month Card -->
+    <template id="monthCard">
+        <div class="month-btn"> 
+            <div class="month-name"></div>
+            <div class="month-year"></div>
+        </div>
+    </template>
+    <!-- Month Card -->     
 
     <!-- Schedule Card -->
         <template id="scheduleCard">
