@@ -114,14 +114,20 @@
   		margin-top: 54px;
   	}
 
+	.monthWrapper{
+		display: flex;
+		justify-content: space-between;
+		margin-right: 60px;
+		margin-left: 60px;
+		margin-bottom: 40px;
+	}
+
   	.month-btns {
         display: flex;
         flex-direction: row;
 		height: 68px;
 		background-color: white;
-		margin-right: 60px;
-		margin-left: 60px;
-		margin-bottom: 40px;
+		flex-grow: 2;
 	}
 
 	.month-btn:hover  {
@@ -174,6 +180,7 @@
 	}
   	
   	.nav-icon-back-month {
+		height: 68px;
 		margin-right: 10px;
 		margin-left: 6px;
 		left: -30px;

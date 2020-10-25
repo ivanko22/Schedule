@@ -1,11 +1,10 @@
 
 let dateArray = [];
-dateArray.pop()
 
 let drawMonthCards = () => {
     let container = document.getElementById("month-btns");
 
-    while(container.children.length > 1){
+    while(container.children.length > 0){
         container.removeChild(container.lastChild);
     }
 
@@ -17,30 +16,40 @@ let drawMonthCards = () => {
     }
 }
 
-let monthScroll = () => {
-    
+let monthScroll = ( x ) => {
     let newArray = [];
-    let newDate = new Date(dateArray[0].getFullYear(), dateArray[0].getMonth() -1, dateArray[0].getMonth());
-    newArray.push(newDate);
-    
-    for(let i = 0; i < dateArray.length -1; i++){
-        newArray.push(dateArray[i]);
-    }
 
+    if(x === -1){
+        let newDate = new Date(dateArray[0].getFullYear(), dateArray[0].getMonth() + x, dateArray[0].getDate());
+        newArray.push(newDate);
+        
+        for(let i = 0; i < dateArray.length -1; i++){
+            newArray.push(dateArray[i]);
+        }
+    }
+    else if( x === 1){
+        for(let i = 1; i < dateArray.length; i++ ){
+            newArray.push(dateArray[i]);
+        }
+
+        let newDate = new Date(dateArray[0].getFullYear(), dateArray[dateArray.length-1].getMonth() + x, dateArray[0].getMonth());
+        newArray.push(newDate);
+    }
+   
     dateArray = newArray;
     drawMonthCards();
 }
 
 let backButton = document.getElementById("backMonth");
-backButton.onclick = monthScroll;
-
+let forwardButton = document.getElementById("forwardMonth");
+backButton.onclick = () => {monthScroll(-1)};
+forwardButton.onclick = () => {monthScroll(1)}; 
 
 fetch("/class", {
     method: "get"
 })
     .then(response => response.json())
     .then((response) => {
-        console.log(response);
         let container = document.getElementById("classes");
         let template = document.getElementById("scheduleCard").content.children[0];
 
@@ -88,6 +97,7 @@ for(let i = 5; i >= 0; i--){
     let newDate = new Date(today.getFullYear(), today.getMonth() - i, today.getDate());
     dateArray.push(newDate);
 }
+
 drawMonthCards();
 
 
